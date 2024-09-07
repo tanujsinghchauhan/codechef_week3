@@ -4,17 +4,25 @@ import Users from "./users";
 function App() {
   return (
     <>
-      <div className="bg-blue-100 w-screen h-screen">
-        <Top></Top>
-        <div className="flex justify-center items-center pt-10 ">
-          <div className="bg-white w-80 h-12 flex items-center justify-between rounded-md">
-            <p className="pl-2 underline underline-offset-8">Organisation</p>
-            <p className="pr-2">Department</p>
+      <div className="bg-blue-100 w-screen h-screen overflow-auto">
+        <Top />
+
+        <div className="flex justify-center items-center pt-5 pb-24">
+          <div className="bg-white w-72 md:w-80 h-12 flex items-center justify-between rounded-md">
+            <p className="pl-2 text-sm md:text-base underline underline-offset-8">
+              Organisation
+            </p>
+            <p className="pr-2 text-sm md:text-base">Department</p>
           </div>
         </div>
-        <div className="flex justify-evenly items-end pt-10 ">
-          <Top3></Top3>
-          <Users></Users>
+
+        <div className="flex flex-col md:flex-row justify-center items-center pt-5 pb-5 gap-4">
+          <div className="w-full md:w-auto flex justify-center">
+            <Top3 />
+          </div>
+          <div className="w-full md:w-auto flex justify-center">
+            <Users />
+          </div>
         </div>
       </div>
     </>

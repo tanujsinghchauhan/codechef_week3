@@ -3,10 +3,12 @@ import Menu from "./assets/menu";
 function Top() {
   return (
     <>
-      <div className="flex justify-evenly">
-        <Back></Back>
-        <div className="font-sans font-bold ">Leaderboard</div>
-        <Menu></Menu>
+      <div className="flex items-center justify-between p-4">
+        <Back />
+        <div className="font-sans font-bold text-xl md:text-2xl px-4">
+          Leaderboard
+        </div>
+        <Menu />
       </div>
     </>
   );
